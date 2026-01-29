@@ -1,0 +1,116 @@
+# generated: 2026-01-29
+# project: testproject
+# project_key: NOKEY
+# tracking_system: file-system
+# story_location: _bmad-output/implementation-artifacts
+
+# STATUS DEFINITIONS:
+# ==================
+# Epic Status:
+#   - backlog: Epic not yet started
+#   - in-progress: Epic actively being worked on
+#   - done: All stories in epic completed
+#
+# Epic Status Transitions:
+#   - backlog → in-progress: Automatically when first story is created (via create-story)
+#   - in-progress → done: Manually when all stories reach 'done' status
+#
+# Story Status:
+#   - backlog: Story only exists in epic file
+#   - ready-for-dev: Story file created in stories folder
+#   - in-progress: Developer actively working on implementation
+#   - review: Ready for code review (via Dev's code-review workflow)
+#   - done: Story completed
+#
+# Retrospective Status:
+#   - optional: Can be completed but not required
+#   - done: Retrospective has been completed
+#
+# WORKFLOW NOTES:
+# ===============
+# - Epic transitions to 'in-progress' automatically when first story is created
+# - Stories can be worked in parallel if team capacity allows
+# - SM typically creates next story after previous one is 'done' to incorporate learnings
+# - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
+
+generated: 2026-01-29
+project: testproject
+project_key: NOKEY
+tracking_system: file-system
+story_location: _bmad-output/implementation-artifacts
+
+development_status:
+  # Epic 1: Project Setup & Core Call Routing Infrastructure
+  epic-1: backlog
+  1-1-initialize-backend-project-with-fastapi: backlog
+  1-2-initialize-frontend-project-with-vite-react: backlog
+  1-3-implement-twilio-webhook-for-inbound-calls: backlog
+  1-4-implement-basic-call-routing-to-dialer: backlog
+  1-5-create-core-database-schema: backlog
+  1-6-setup-ci-cd-pipeline: backlog
+  epic-1-retrospective: optional
+
+  # Epic 2: Intelligent Data-Driven Routing
+  epic-2: backlog
+  2-1-implement-redis-caching-service: backlog
+  2-2-implement-braze-api-integration: backlog
+  2-3-implement-customer-data-caching: backlog
+  2-4-implement-lead-score-based-routing: backlog
+  2-5-implement-lead-owner-based-routing: backlog
+  epic-2-retrospective: optional
+
+  # Epic 3: Dialer Reliability & Failover
+  epic-3: backlog
+  3-1-implement-dialfire-api-integration: backlog
+  3-2-implement-zendesk-talk-api-integration: backlog
+  3-3-implement-dialer-retry-and-fallback-logic: backlog
+  3-4-implement-load-balancing-between-dialers: backlog
+  3-5-implement-dtmf-ivr-fallback-menu: backlog
+  3-6-implement-call-status-tracking: backlog
+  epic-3-retrospective: optional
+
+  # Epic 4: Operations Monitoring Dashboard
+  epic-4: backlog
+  4-1-implement-call-metrics-api-endpoints: backlog
+  4-2-implement-integration-health-api-endpoints: backlog
+  4-3-build-dashboard-home-page: backlog
+  4-4-build-routing-distribution-view: backlog
+  4-5-build-integration-health-status-display: backlog
+  4-6-build-call-trace-view-for-debugging: backlog
+  epic-4-retrospective: optional
+
+  # Epic 5: Alerting & Proactive Notifications
+  epic-5: backlog
+  5-1-implement-alert-service-and-email-notifications: backlog
+  5-2-implement-routing-failure-rate-monitoring: backlog
+  5-3-implement-integration-failure-alerting: backlog
+  5-4-build-alert-configuration-ui: backlog
+  epic-5-retrospective: optional
+
+  # Epic 6: Routing Rule Configuration
+  epic-6: backlog
+  6-1-create-routing-rules-data-model-and-api: backlog
+  6-2-implement-lead-owner-mapping-configuration: backlog
+  6-3-implement-lead-score-tier-configuration: backlog
+  6-4-implement-time-based-routing-rules: backlog
+  6-5-implement-load-balancing-configuration: backlog
+  epic-6-retrospective: optional
+
+  # Epic 7: User Management & Access Control
+  epic-7: backlog
+  7-1-implement-secure-credential-storage: backlog
+  7-2-create-user-management-data-model-and-api: backlog
+  7-3-implement-role-based-access-control: backlog
+  7-4-build-user-management-ui: backlog
+  epic-7-retrospective: optional
+
+  # Epic 8: Audit Trail & Compliance
+  epic-8: backlog
+  8-1-implement-routing-decision-audit-logging: backlog
+  8-2-implement-api-request-response-logging: backlog
+  8-3-implement-configuration-change-logging: backlog
+  8-4-implement-log-retention-and-management: backlog
+  8-5-build-audit-log-search-and-query-ui: backlog
+  8-6-implement-call-outcome-logging-to-braze: backlog
+  8-7-implement-data-encryption-at-rest: backlog
+  epic-8-retrospective: optional
