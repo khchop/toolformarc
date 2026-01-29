@@ -1,0 +1,5 @@
+"""Database base and session setup."""
+
+from sqlalchemy.orm import declarative_base
+
+Base = declarative_base()
