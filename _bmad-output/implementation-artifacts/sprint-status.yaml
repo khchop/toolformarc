@@ -43,7 +43,7 @@ development_status:
   # Epic 1: Project Setup & Core Call Routing Infrastructure
   epic-1: in-progress
   1-1-initialize-backend-project-with-fastapi: done
-  1-2-initialize-frontend-project-with-vite-react: backlog
+  1-2-initialize-frontend-project-with-vite-react: done
   1-3-implement-twilio-webhook-for-inbound-calls: backlog
   1-4-implement-basic-call-routing-to-dialer: backlog
   1-5-create-core-database-schema: backlog
