@@ -1,0 +1,54 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ivr-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:password@db:5432/ivr_db
+      - REDIS_URL=redis://redis:6379/0
+      - API_KEY=${API_KEY:-your-api-key-here}
+      - APP_ENV=development
+      - LOG_LEVEL=debug
+    volumes:
+      - ./:/app
+    depends_on:
+      - db
+      - redis
+    networks:
+      - ivr-network
+
+  db:
+    image: postgres:15-alpine
+    container_name: ivr-db
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
+      - POSTGRES_DB=ivr_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - ivr-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: ivr-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - ivr-network
+
+networks:
+  ivr-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:
